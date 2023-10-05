@@ -12,16 +12,19 @@ ___
 
 # 3 | Architectual Design
 Our application will use a server based architecture that will have access to a database which is yet to be decided but most likely will use mysql. The user will access the application which will be ran on the server which will then communicate and store information accordingly to the database side of thing.
+
 ![Untitled-1](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/9240ba94-35ae-4310-9a06-07035242bdf5)
 ___
 
 # 4 | UML Diagram
 The program for the server side of the application can be shown using a UML diagram of the cases and how they interact with eachother and the user. Our app consists of 4 currently, the Food, Drink, Diet, and User classes that each contribute to the operation of the application having their own attributes and methods.
+
 ![Blank diagram](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/9a546753-6382-471f-b8c3-51d214be519d)
 ___
 
 # 5 | Use Case Diagram
 In addition to the UML diagram, a use-case diagram was constructed to show what the our app can provide for the user. Different available actions will be implimented down the road but for now, our structure consists of these actions.
+
 ![image](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/6c2cf1e9-38fb-4199-a732-51873df31688)
 ___
 
@@ -31,6 +34,7 @@ ___
 
 # 7 | Workflow
 Our team is using Jira to help manage our project via sprints to each goal that we have in mind. This is the link to our Jira that we plan to use and an image of the first epic that we have completed! https://fairfiea.atlassian.net/jira/software/projects/CS3DAP/boards/2
+
 ![image](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/4d37aace-45fd-4828-8696-451079f631bc)
 ___
 
