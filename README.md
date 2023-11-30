@@ -36,8 +36,8 @@ To map out the general program work flow, we used a sequence diagram to display 
 # 7 | UI Design
 Our current UI Design is shown below, the use of two different pages one being the main page that displays the calorie count for the week and calorie bar chart for each day. The second page is one that displays a data entry for a meal with meal name, calorie count, what day it is, and type of meal.
 
-![MealEntry](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/f455ed0d-5f13-402b-bd6e-41e799b955da)
 ![Frontpage](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/080dcdfd-70d9-4848-9ce0-d86a4822d989)
+![MealEntry](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/f455ed0d-5f13-402b-bd6e-41e799b955da)
 
 ___
 
