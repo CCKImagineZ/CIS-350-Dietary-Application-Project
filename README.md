@@ -27,6 +27,11 @@ In addition to the UML diagram, a use-case diagram was constructed to show what 
 
 ![image](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/6c2cf1e9-38fb-4199-a732-51873df31688)
 ___
+# 6 | Sequence Diagram
+To map out the general program work flow, we used a sequence diagram to display the layout and workflow of the dietary application!
+
+![Blank diagram](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/db25d6c9-00c2-41e9-a56b-20b357c5520f)
+
 
 # 6 | UI Design
 We have not designed the UI for our application but we do have a direction we are planning to go with, we have decided to go with a front page that is filled with the daily calorie count with a visual representation the the amount left until the user hits their goal. This visual represenation will be in the shape of a fruit to encompass a healthy look to the app front page. Other uses will be buttons on the front page either at the bottom of the screen or on the side to help the user navigate through the various different settings and actions found within our app. 
