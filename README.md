@@ -33,7 +33,7 @@ To map out the general program work flow, we used a sequence diagram to display 
 ![Blank diagram](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/db25d6c9-00c2-41e9-a56b-20b357c5520f)
 
 
-# 6 | UI Design
+# 7 | UI Design
 Our current UI Design is shown below, the use of two different pages one being the main page that displays the calorie count for the week and calorie bar chart for each day. The second page is one that displays a data entry for a meal with meal name, calorie count, what day it is, and type of meal.
 
 ![MealEntry](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/f455ed0d-5f13-402b-bd6e-41e799b955da)
@@ -41,7 +41,7 @@ Our current UI Design is shown below, the use of two different pages one being t
 
 ___
 
-# 7 | Workflow
+# 8 | Workflow
 Our team is using Jira to help manage our project via sprints to each goal that we have in mind. This is the link to our Jira that we plan to use and an image of the first epic that we have completed! https://fairfiea.atlassian.net/jira/software/projects/CS3DAP/boards/2
 
 ![image](https://github.com/CCKImagineZ/CIS-350-Dietary-Application-Project/assets/57023982/4d37aace-45fd-4828-8696-451079f631bc)
