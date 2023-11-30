@@ -1,31 +1,46 @@
-from flask import Flask, request, jsonify
+import sqlite3
 
-app = Flask(__name__)
+class Database():
+    def __init__(self):
+        self.connection = sqlite3.connect("Diet.db")
+        self.cur = self.connection.cursor()
+        self.create_table()
 
-@app.route('/api/data', methods=['GET', 'POST'])
-def get_or_post_data():
-    if request.method == 'GET':
-        # Simulate getting data from the database or another source.
-        data = {'message': 'This is data from the backend.'}
-        return jsonify(data)
-    elif request.method == 'POST':
-        # Get data from the Flutter frontend.
-        request_data = request.get_json()
-        # Process the data as needed.
-        response_data = {'message': 'Data received and processed on the backend.'}
-        return jsonify(response_data)
+    def create_table(self):
+        self.cur.execute("CREATE TABLE if not exists Diet(meal_name,Cal,Date,Type)")
 
-class Data:
-    def __init__(self, fname:str, calcount:int, typemeal:str, date:str):
-        self.fname = fname
-        self.calcount = calcount
-        self.typemeal = typemeal
-        self.date = date
+    def insert_table(self,name,calcount,date,typem):
+        self.cur.execute("INSERT INTO Diet (meal_name,Cal,Date,Type) VALUES (?,?,?,?)", (name,calcount,date,typem))
+        self.connection.commit()
 
-    def get_data(self):
-        return f"{self.fname}, {self.calcount}, {self.typemeal}, {self.date}"
+    def get_table(self):
+        self.cur.execute("SELECT * FROM Diet")
+        return self.cur.fetchall()
 
+    def get_dailytotals(self):
+        values = []
+        values = self.get_table()
+        final = [0, 0, 0, 0, 0, 0, 0]
+        if values == []:
+            return final
+        else:
+            for n in values:
+                print(n[2])
+                if n[2] == "Monday":
+                    final[0] += int(n[1])
+                if n[2] == "Tuesday":
+                    final[1] += int(n[1])
+                if n[2] == "Wednesday":
+                    final[2] += int(n[1])
+                if n[2] == "Thursday":
+                    final[3] += int(n[1])
+                if n[2] == "Friday":
+                    final[4] += int(n[1])
+                if n[2] == "Saturday":
+                    final[5] += int(n[1])
+                if n[2] == "Sunday":
+                    final[6] += int(n[1])
+        print(final)
+        return final
 
-if __name__ == '__main__':
-    app.run(debug=True)
 
