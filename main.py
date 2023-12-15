@@ -12,12 +12,23 @@ def main(page):
     global total
     for n in dbdaily:
         total += n
+
     def btn_click(e):
-        if not txt_name.value or not txt_cal.value or not txt_date.value:
-            txt_name.error_text = "Please enter your Meal Name"
-            txt_cal.error_text = "Please enter your meal calorie amount"
-            txt_date.error_text = "Please enter the date of your meal"
+        if not txt_name.value or not txt_cal.value or not txt_date.value or not txt_meal.value:
+            txt_name.error_text = "Please enter your Meal Name!"
+            txt_cal.error_text = "Please enter your meal calorie amount!"
+            txt_date.error_text = "Please enter the date of your meal!"
+            txt_meal.error_text = "Please enter the type of meal!"
             page.update()
+
+        elif not txt_cal.value.isdigit():
+            txt_cal.error_text = "Please enter a whole number!"
+            page.update()
+
+        elif int(txt_cal.value) == 0:
+            txt_cal.error_text = "Please enter a nonzero number!"
+            page.update()
+
         else:
             db = Database()
             db.insert_table(txt_name.value,txt_cal.value,txt_date.value,txt_meal.value)
@@ -31,6 +42,7 @@ def main(page):
                 total += n
             page.clean()
             mainpage()
+
     def buttonclick(e):
         page.clean()
         mealentry = ft.Container(
@@ -99,7 +111,7 @@ def main(page):
         )
         welcomemenu = ft.Container(
             width=290,
-            height=525,
+            height=540,
             border_radius=30,
             gradient=ft.LinearGradient(
                 begin=ft.alignment.top_left,
@@ -317,10 +329,11 @@ def main(page):
                     ft.Container(
                         content=ft.ElevatedButton(
                             "Add Meal",
-                            icon_color='blue',
+                            icon_color='Black',
+                            color='Grey',
                             icon=ft.icons.FASTFOOD,
-                            height=50,
-                            width=140,
+                            height=35,
+                            width=135,
                             style=ft.ButtonStyle(shape=ft.ContinuousRectangleBorder(radius=30)),
                             on_click=buttonclick,
                         ),
@@ -342,6 +355,7 @@ def main(page):
                            options=[ft.dropdown.Option("Breakfast"),
                            ft.dropdown.Option("Lunch"),
                            ft.dropdown.Option("Dinner"),],width=200,color='grey')
+
     txt_date = ft.Dropdown(label="Day of Meal",color='grey',text_size=15,
                            options=[ft.dropdown.Option("Monday"),
                                     ft.dropdown.Option("Tuesday"),

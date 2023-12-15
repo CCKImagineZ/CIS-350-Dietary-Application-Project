@@ -25,7 +25,6 @@ class Database():
             return final
         else:
             for n in values:
-                print(n[2])
                 if n[2] == "Monday":
                     final[0] += int(n[1])
                 if n[2] == "Tuesday":
@@ -40,7 +39,6 @@ class Database():
                     final[5] += int(n[1])
                 if n[2] == "Sunday":
                     final[6] += int(n[1])
-        print(final)
         return final
 
 
